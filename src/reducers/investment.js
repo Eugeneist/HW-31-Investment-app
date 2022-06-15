@@ -33,9 +33,7 @@ const investmentReducer = (state = initialState, action) => {
           ...state,
           amount: 0,
         };
-      }
-
-      if (state.amount === 0) {
+      } else if (state.amount === 0) {
         return {
           ...state,
           error: "You already have 0$",
